@@ -1,0 +1,58 @@
+/ *
+ * Para cambiar este encabezado de licencia, elija Encabezados de licencia en Propiedades del proyecto.
+* Para cambiar este archivo de plantilla, elija Herramientas | Plantillas
+ * y abra la plantilla en el editor.
+ * /
+paquete  progooog006 ;
+import  java.util.Scanner ;
+
+/ **
+ * *
+* @autor Albarran Magaña Leslie Andrea
+ * /
+ clase  pública ProgOOOG006 {
+
+    static  int [] arreglo =  new  int [ 10 ];
+
+    estática  escáner  SC  =  nuevo  escáner ( System . en);
+
+
+    public  static  void  main ( String [] args ) {
+        insertarDatosArray ();
+        OrdenArray ();
+
+    }
+
+     vacío estático  privado insertarDatosArray () { 
+
+        Escáner lector =  nuevo  escáner ( Sistema . En);
+        int limite, i, j, aux;
+        Sistema . a cabo . println ( " Ingrese le limite de la lista: " );
+        Limite = lector . nextInt ();
+
+        para (i =  0 ; i < limite; i ++ ) {
+            Sistema . a cabo . print ( " \ n [ "  + (i +  1 ) +  " ] = " );
+            arreglo [i] = lector . nextInt ();
+        }
+
+        para (i =  0 ; i < limite; i ++ ) {
+            para (j = i +  1 ; j < limite; j ++ ) {
+                if (arreglo [i] > arreglo [j]) {
+                    aux = arreglo [i];
+                    arreglo [i] = arreglo [j];
+                    arreglo [j] = aux;
+                }
+            }
+        } 
+    }
+
+    orden  estático  privado vacío  OrdenArray () {
+        Sistema . a cabo . print ( " \ n Orden: { " );
+        for ( int i =  0 ; i < arreglo . length; i ++ ) {
+            Sistema . a cabo . print (arreglo [i] +  " , " );
+        }
+        Sistema . a cabo . println ( " } " );
+
+
+    }
+}
